@@ -5,6 +5,7 @@ import ru.sayakhov.DrinkType;
 public class SecondVendingMachine {
     private static final int VENDING_SIZE = 5;
     private Drink[] drinks = new Drink[5];
+    private Drink[] drinks2 = new Drink[5];// добавил для теста
     private DrinkType type;
 
     public static int getVendingSize() {
@@ -16,6 +17,7 @@ public class SecondVendingMachine {
         // удалить напиток из данной ячейки
         return drinks;
     }//получить список всех напитков
+
     public void setDrinks(Drink[] drinks) {
         if(drinks.length > 5){
             System.out.println("В машине всего 5 мест");
@@ -38,7 +40,7 @@ public class SecondVendingMachine {
         drinks[index] = drink; // загружаем по одному
     }
     public Drink getDrink(int index) {
-        if (drinks[index] == null){
+        if (drinks[index] == null) {
             System.out.println("В данной ячейке пусто");
         }
         return drinks[index];
@@ -46,4 +48,13 @@ public class SecondVendingMachine {
     // remoove drinkks с какой ячейки удалить  напиток
     // в  метое add проверить размер и индекс
     // создать пару машин разной логинкой
+
+// добавил для теста
+    public Drink[] getDrinks2() {
+        return drinks2;
+    }
+
+    public void setDrinks2(Drink[] drinks2) {
+        this.drinks2 = drinks2;
+    }
 }
