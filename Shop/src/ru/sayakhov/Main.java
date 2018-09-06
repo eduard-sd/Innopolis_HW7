@@ -1,6 +1,8 @@
 package ru.sayakhov;
 
 
+import java.time.LocalDate;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -15,10 +17,11 @@ public class Main {
         Stuff vika = new Stuff("Viktoria",26,Sex.FEMALE, 25000);
         Stuff olga = new Stuff("Olga",46,Sex.FEMALE, 55000);
 
-        Product whiteBread = new Product("White bread",120,Station.BREAD);
-        Product chikenGril = new Product("Chiken Grill", 200,Station.MEET);
-        Product beefMeet = new Product("Beef Meet", 300,Station.MEET);
-        Product pooding = new Product("Pooding", 50, Station.MILK);
+        Product whiteBread = new Product("White bread",120, LocalDate.of(2018,9,22),Station.BREAD);
+        Product chikenGril = new Product("Chiken Grill", 200,LocalDate.of(2018,9,10),Station.MEET);
+        Product beefMeet = new Product("Beef Meet", 300,LocalDate.of(2018,10,31),Station.MEET);
+        Product pooding = new Product("Pooding",150,Station.MILK);
+        pooding.setExpirationDate(LocalDate.of(2019,9,23));
 
         whiteBread.setStationStuff(petia);
         chikenGril.setStationStuff(petia);
@@ -31,5 +34,6 @@ public class Main {
         magnit.setBuyersList(new Buyers[]{viktor,kate,alex,nastya});
 
         System.out.println(magnit);
+
     }
 }

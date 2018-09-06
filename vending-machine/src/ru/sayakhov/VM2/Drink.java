@@ -4,6 +4,7 @@ import ru.sayakhov.Currency;
 import ru.sayakhov.DrinkType;
 
 public class Drink {
+    private static int counter;
     private int price;
     private String name;
     private Currency moneyCurr;
@@ -14,6 +15,7 @@ public class Drink {
         this.name = name;
         this.moneyCurr = moneyCurr;
         this.type = type;
+        counter++;
     }
 
     public int getPrice() {
@@ -38,6 +40,14 @@ public class Drink {
 
     public void setMoneyCurr(Currency moneyCurr) {
         this.moneyCurr = moneyCurr;
+    }
+
+    public static int getCounter() {
+        return counter;
+    }
+
+    public DrinkType getType() {
+        return type;
     }
 
     @Override

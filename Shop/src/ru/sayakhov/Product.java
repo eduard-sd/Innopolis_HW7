@@ -1,12 +1,11 @@
 package ru.sayakhov;
 
-//import java.text.SimpleDateFormat;// не понял как подставить дату
-import java.util.Date;
+import java.time.LocalDate;
 
 public class Product {
     private String name;
     private int price;
-    private Date expirationDate; //= new SimpleDateFormat("dd-M-yyyy"); // срок годности
+    private LocalDate expirationDate; // срок годности
     private Station station;
     private Stuff stationStuff;
 
@@ -24,7 +23,7 @@ public class Product {
         this.station = station;
     }
 
-    public Product(String name, int price, Date expirationDate, Station station) {
+    public Product(String name, int price, LocalDate expirationDate, Station station) {
         this.name = name;
         this.price = price;
         this.expirationDate = expirationDate;
@@ -47,11 +46,11 @@ public class Product {
         this.price = price;
     }
 
-    public Date getExpirationDate() {
+    public LocalDate getExpirationDate() {
         return expirationDate;
     }
 
-    public void setExpirationDate(Date expirationDate) {
+    public void setExpirationDate(LocalDate expirationDate) {
         this.expirationDate = expirationDate;
     }
 
